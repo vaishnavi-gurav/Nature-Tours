@@ -1,0 +1,131 @@
+body{
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: $color-dark-grey;
+}
+
+
+.heading-primary{
+    color: $color-white;
+    text-transform: uppercase;
+    text-align: center;
+    backface-visibility: hidden;
+    margin-bottom: 60px;
+
+    &--main{
+        display: block;
+        font-size: 60px;
+        font-weight: 400;
+        letter-spacing: 35px;
+        animation-name: moveInLeft;
+        animation-duration: 2000ms;
+        /* animation-delay: 1s; */
+        animation-timing-function: ease-out;
+        animation-fill-mode: backwards;
+
+        @include respond(big-desktop){
+            font-size: 100px;
+            letter-spacing: 75px;
+        }
+
+        @include respond(phone){
+            letter-spacing: 1.5rem;
+            font-size: 5rem;
+        }
+
+    }
+    
+    &--sub{
+        display: block;
+        font-size: 20px;
+        font-weight: 400;
+        letter-spacing: 15px;
+        animation-name: moveInRight;
+        animation-duration: 2000ms;
+        /* animation-delay: 1s; */ 
+        animation-timing-function: ease-out;
+        animation-fill-mode: backwards;
+
+        @include respond(big-desktop){
+            font-size: 30px;
+            letter-spacing: 20px;
+        }
+
+        @include respond(phone){
+            letter-spacing: .5rem;
+            font-size: 2.5rem;
+        }
+    }
+}
+
+#heading-secondary{
+    @include respond(tab-land){
+       margin-top: 6rem;
+    }
+
+    @include respond(tab-port){
+       margin-top: 4rem;
+    }
+}
+
+.heading-secondary{
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: inline-block;
+    background: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    color: transparent;
+    letter-spacing: .2rem;
+    transition: all .2s;
+
+    @supports(-webkit-background-clip: text) or (background-clip: text) {
+        -webkit-background-clip: text;
+        background-clip: text;
+     }
+
+    @include respond(big-desktop){
+        font-size: 4rem !important;
+    }
+
+    @include respond(tab-land){
+        font-size: 2.8rem;
+    }
+
+    @include respond(tab-port){
+        font-size: 2.6rem;
+    }
+
+    @include respond(phone){
+        font-size: 2.4rem;
+    }
+
+        &:hover{
+            transform: skew(15deg, 2deg) scale(1.1);
+            text-shadow: .5rem 1rem 2rem rgba($color-black, 0.3);
+        }
+}
+
+.heading-tertiary{
+    font-size: $default-font-size;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+
+    @include respond(big-desktop){
+        font-size: 3rem;
+    }
+}
+
+.paragraph{
+    font-size: $default-font-size;
+
+    &:not(:last-child){
+        margin-bottom: 3rem;
+    }
+
+    @include respond(big-desktop){
+        font-size: 1.8rem;
+    }
+}

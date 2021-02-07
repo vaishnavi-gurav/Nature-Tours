@@ -1,0 +1,106 @@
+.story{
+    width: 85%;
+    height: 40%;
+    margin: 0 auto;
+    padding: 6rem 6rem;
+    box-shadow: 0 3rem 6rem rgba($color-black, .1);
+    // background-color: $color-white;
+    // opacity: .6;  // setting opacity on parent element affects all the other child elements opacity simultaneously.  
+    background-color: rgba($color-white, .6); // set alpha value instead that affects only the background-color of parent element,
+                                              // and not all the other child elements in it.
+    border-radius: 3px;
+    transform: skewX(-12deg);
+    font-size: $default-font-size;
+
+    @include respond(tab-land){
+        padding: 4rem;
+        padding-left: 7rem;
+        transform: skewX(0);
+    }
+
+
+    @include respond(phone){
+        transform: skewX(0);
+    }
+
+    &:not(:last-child){
+        margin-bottom: 8rem;
+    }
+
+    & > * {
+        transform: skewX(12deg);   // This will work only for .story__text and not on .story__shape
+
+        @include respond(tab-land){
+            transform: skewX(0);
+        }
+
+        // @include respond(tab-port){
+        //     transform: skewX(0);
+        // }
+    
+        // @include respond(phone){
+        //     transform: skewX(0);
+        // }
+    
+    }
+
+    &__shape{
+        width: 15rem;
+        height: 15rem;
+        float: left;
+        // transform: skewX(12deg);  This transform will not work as we have another transform already declared below.  
+        transform: translateX(-2rem) skewX(12deg); // Thus we manually specify skewX(12deg) in order to skew the story__shape by 12deg,
+        // and combine both the transforms because two separate transform property -
+        // will have no effect. i.e., only the later declared transform will be effective.
+        overflow: hidden;  //fix for a glitch due to story__image overflowing 
+        border-radius: 50%;
+        
+        @supports(clip-path: polygon(0 0)) or (-webkit-clip-path:polygon(0 0)){  //Checks for Support in all Browsers and if supports overrides the above rules
+            -webkit-shape-outside: circle(50% at 50% 50%); //Vendor prefix to work on safari
+            shape-outside: circle(50% at 50% 50%);   
+            -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+            border-radius: none;
+        }
+
+        @include respond(tab-land){
+            transform: translateX(-2rem) skewX(1deg);
+            overflow: hidden;
+        }
+    
+    }
+
+    &__image{
+        height: 100%;
+        clip-path: circle(50% at 50% 50%);
+        transform: translateX(-4rem) scale(1.4);
+        transition: all .3s;
+    }
+
+    &__caption{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, 20%);
+        color: $color-white;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        text-align: center;
+        font-size: 1.7rem;
+        font-weight: 400;
+        opacity: 0;
+        transition: all .5s;
+        backface-visibility: hidden;
+    }
+
+    &:hover &__caption{
+        opacity: 1;
+        transform: translate(-50%,-50%);
+    }
+
+    &:hover &__image{
+        transform: translateX(-4rem) scale(1);
+        filter: blur(3px) brightness(80%);
+    }
+
+}
