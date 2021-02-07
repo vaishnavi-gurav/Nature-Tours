@@ -4,7 +4,7 @@
         to right bottom, 
         rgba($color-primary-light, 0.8), 
         rgba($color-primary-dark, 0.8)), 
-        url('./img/hero-small.jpg');
+        url('img/hero-small.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
@@ -21,7 +21,7 @@
             to right bottom, 
             rgba($color-primary-light, 0.8), 
             rgba($color-primary-dark, 0.8)), 
-            url('./img/hero.jpg');
+            url('img/hero.jpg');
     
             -webkit-clip-path: polygon(0 0, 100% 0, 100% 65vh, 0 95%);
              clip-path: polygon(0 0, 100% 0, 100% 65vh, 0 95%);
@@ -32,7 +32,7 @@
         to right bottom, 
         rgba($color-primary-light, 0.8), 
         rgba($color-primary-dark, 0.8)), 
-        url('./img/hero.jpg');
+        url('img/hero.jpg');
 
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 65vh, 0 95%);
         clip-path: polygon(0 0, 100% 0, 100% 65vh, 0 95%);
