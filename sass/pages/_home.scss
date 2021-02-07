@@ -30,7 +30,7 @@
         to right bottom, 
         rgba($color-primary-light, 0.8), 
         rgba($color-primary-dark, 0.8)), 
-        url('/img/nat-4.jpg');
+        url('../img/nat-4.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     transform: skewY(-7deg);
@@ -46,7 +46,7 @@
         to right bottom, 
         rgba($color-primary-light, 0.8), 
         rgba($color-primary-dark, 0.8)), 
-        url('/img/nat-4-large.jpg');
+        url('../img/nat-4-large.jpg');
 
     }
 
@@ -55,7 +55,7 @@
         to right bottom, 
         rgba($color-primary-light, 0.8), 
         rgba($color-primary-dark, 0.8)), 
-        url('/img/nat-4-large.jpg');
+        url('../img/nat-4-large.jpg');
     }
 
 
@@ -103,7 +103,7 @@
     background-image: linear-gradient(105deg, rgba($color-white, .8) 0%,
                                       rgba($color-white, .8) 50%,
                                       rgba($color-white, 0) 50%
-                                     ), url("/img/nat-10.jpg");
+                                     ), url("../img/nat-10.jpg");
     background-size: cover;
     border-radius: 3px;
     box-shadow: 0 1.5rem 5rem rgba($color-black, .25);
@@ -112,14 +112,14 @@
         background-image: linear-gradient(105deg, rgba($color-white, .8) 0%,
                                       rgba($color-white, .8) 50%,
                                       rgba($color-white, 0) 50%
-                                     ), url("/img/nat-10-large.jpg");
+                                     ), url("../img/nat-10-large.jpg");
     }
 
     @include respond(big-desktop-2x){
         background-image: linear-gradient(105deg, rgba($color-white, .8) 0%,
                                       rgba($color-white, .8) 50%,
                                       rgba($color-white, 0) 50%
-                                     ), url("/img/nat-10-large.jpg");
+                                     ), url("../img/nat-10-large.jpg");
     }    
 
 
@@ -128,14 +128,14 @@
          background-image: linear-gradient(105deg, rgba($color-white, .8) 0%,
                                       rgba($color-white, .8) 65%,
                                       rgba($color-white, 0) 65% 
-                                     ), url("/img/nat-10.jpg");
+                                     ), url("../img/nat-10.jpg");
     }
 
     @include respond(tab-port){
 
         background-image: linear-gradient(to right, rgba($color-white, .8) 0%,
                                      rgba($color-white, .8) 100%), 
-                                     url("/img/nat-10.jpg");
+                                     url("../img/nat-10.jpg");
    }
 
 
