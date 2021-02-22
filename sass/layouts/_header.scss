@@ -67,6 +67,12 @@
          clip-path: polygon(0 0, 100% 0, 100% 65vh, 0 85%);
     }
 
+    @include respond(phone-landscape){
+        height: 150vh;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 95vh, 0 80%);
+        clip-path: polygon(0 0, 100% 0, 100% 95vh, 0 80%);
+    }
+
    
 
 
@@ -78,6 +84,10 @@
     
     &__logo{
         height: 35px;
+
+        @include respond(phone-landscape){
+            height: 25px;
+        }
     }
     
     &__logo:hover{

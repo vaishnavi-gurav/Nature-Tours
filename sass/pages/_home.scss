@@ -8,7 +8,6 @@
     @include respond(tab-land){
         padding: 20rem 0;
         margin-top: -35vh;
-        height: 100rem;
     }
 
     @include respond(tab-port){
@@ -20,6 +19,10 @@
     @include respond(phone){
         padding: 20rem 0;
         margin-top: -38vh;
+    }
+
+    @include respond(phone-landscape){
+        margin-top: -62vh;
     }
 }
 

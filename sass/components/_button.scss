@@ -20,6 +20,10 @@
             padding: 20px 40px;
             font-size: 2rem;
         }
+
+        @include respond(phone-landscape){
+            padding: 10px 30px;
+        }
     }
     
     &:hover{

@@ -44,6 +44,10 @@ ORDER : Base + Typography > General Layout + Grid > Page Layout > Components
         @media only screen and (max-width:37.5em){  @content; }
     }
 
+    @if $breakpoint == phone-landscape{
+        @media only screen and (orientation: landscape){ @content; }
+    }
+
     @if $breakpoint == tab-port {
         @media only screen and (max-width:56.25em) {  @content; }
     }

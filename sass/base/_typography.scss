@@ -14,6 +14,11 @@ body{
     backface-visibility: hidden;
     margin-bottom: 60px;
 
+    @include respond(phone-landscape){
+        margin-bottom: 35px;
+
+    }
+
     &--main{
         display: block;
         font-size: 60px;
@@ -57,17 +62,22 @@ body{
             letter-spacing: .5rem;
             font-size: 2.5rem;
         }
+
     }
 }
 
 #heading-secondary{
+
+    margin-top: 10rem;
+
     @include respond(tab-land){
-       margin-top: 6rem;
+       margin-top: 12rem;
     }
 
     @include respond(tab-port){
        margin-top: 4rem;
     }
+
 }
 
 .heading-secondary{
