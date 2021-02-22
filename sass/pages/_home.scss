@@ -1,23 +1,23 @@
 .section-about{
     background-color: $color-light-grey-1;
-    padding: 25rem 0; 
+    padding: 25rem 3rem; 
     margin-top: -30vh;
     height: 110rem;
 
 
     @include respond(tab-land){
-        padding: 20rem 0;
+        padding: 20rem 3rem;
         margin-top: -35vh;
     }
 
     @include respond(tab-port){
-        padding: 20rem 0;
+        padding: 20rem 3rem;
         margin-top: -35vh;
         height: 120rem;
     }
 
     @include respond(phone){
-        padding: 20rem 0;
+        padding: 15rem 3rem;
         margin-top: -38vh;
     }
 
@@ -28,7 +28,7 @@
 
 
 .section-features{
-    padding: 20rem 0;
+    padding: 20rem 3rem;
     background-image: linear-gradient(
         to right bottom, 
         rgba($color-primary-light, 0.8), 
@@ -63,13 +63,13 @@
 
 
     @include respond(tab-port){
-        padding: 10rem 0;
+        padding: 10rem 3rem;
     }
 }
 
 .section-tours{
     background-color: $color-light-grey-1;
-    padding: 25rem 0 10rem 0;
+    padding: 25rem 2rem 10rem 2rem;
     margin-top: -10rem;
 
     @include respond(big-desktop){
@@ -77,12 +77,12 @@
     }
 
     @include respond(tab-port){
-        padding: 20rem 0 5rem 0;
+        padding: 20rem 2rem 5rem 2rem;
     }
 }
 
 .section-stories{
-    padding: 8rem 0;
+    padding: 8rem 3rem;
     position: relative;
 
     @include respond(tab-port){
@@ -93,11 +93,11 @@
 
 .section-book{
     // position: relative;
-    padding: 8rem 0;
+    padding: 8rem 3rem;
     background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
 
     @include respond(tab-port){
-        padding: 10rem 0;
+        padding: 10rem 3rem;
     }
 
 }
